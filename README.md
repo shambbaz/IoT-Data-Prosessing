@@ -83,16 +83,3 @@ python data_generator.py
 python data_storage.py
 python ml_model.py
 python data_visualizer.py
-
-
-6. Key Takeaways
-Testing: Transitioning from unit to end-to-end testing revealed system complexities and ensured robustness.
-Problem Solving: Overcame challenges like database issues, testing conflicts, and visualization adjustments.
-CI/CD Automation: Streamlined development and testing with a fully automated pipeline.
-Integration: Successfully integrated multiple components to work seamlessly together.
-7. How This Project Aligns with Employer Needs
-Python Expertise: Python was used as the primary programming language.
-Testing Knowledge: Demonstrated unit and end-to-end testing practices applicable to real-world scenarios.
-DevOps and CI/CD: Implemented an automated development pipeline with GitHub Actions.
-Data Analysis: Showcased the ability to process IoT data with an ML model.
-Visualization Skills: Developed capabilities for graphical data representation essential for reporting and insights.
