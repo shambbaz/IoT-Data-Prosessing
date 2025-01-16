@@ -1,3 +1,6 @@
+The project is not a direct IoT data processing system, but an example that simulates IoT system components. We particularly focused on learning how to build and test the basic pieces of such a system
+The main focus of the project was on testing the program and ensuring its various aspects, such as data generation, storage and analysis. We especially used pytest to implement comprehensive unit and end-to-end tests
+
 # IoT Data Processing Platform
 
 ## 1. Project Overview
