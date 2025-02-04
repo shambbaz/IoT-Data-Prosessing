@@ -4,7 +4,7 @@ import os
 # Lisää projektin juurihakemisto Pythonin hakupolulle
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import os
-from data_storage import save_sensor_data, fetch_all_data, clear_database
+from data_storage import save_sensor_data, fetch_all_data
 from data_generator import generate_sensor_data
 from ml_model import analyze_data
 from data_visualizer import visualize_data
