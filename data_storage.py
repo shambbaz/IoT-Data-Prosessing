@@ -44,32 +44,8 @@ def fetch_all_data():
     conn.close()
     return data
 
-# Funktio tietokannan tyhjentämiseen (jos sitä tarvitaan manuaalisesti)
-def clear_database():
-    """
-    Tyhjentää sensor_data-taulun, jos se on olemassa.
-    """
-    conn = sqlite3.connect(DATABASE)
-    cursor = conn.cursor()
-
-    # Luo taulu, jos sitä ei ole
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS sensor_data (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            temperature REAL,
-            humidity REAL,
-            pressure REAL
-        )
-    """)
-
-    # Tyhjennä taulu (TÄTÄ EI KUTSUTA AUTOMAATTISESTI)
-    cursor.execute("DELETE FROM sensor_data")
-    conn.commit()
-    conn.close()
-
-# Testaa funktiot (valinnainen)
 if __name__ == "__main__":
-    # POISTETTU: clear_database() kutsu, jotta data ei tyhjene
+    # POISTETTU clear_database(), jotta data ei tyhjene
 
     # Lisää testidataa
     save_sensor_data(25.3, 60.2, 1010.5)
@@ -78,7 +54,3 @@ if __name__ == "__main__":
     # Hae ja tulosta tallennettu data
     data = fetch_all_data()
     print("Tallennettu data:", data)
-
-    # POISTETTU: clear_database() kutsu, jotta data ei häviä
-    data_after_clear = fetch_all_data()
-    print("Data tietokannassa edelleen:", data_after_clear)
